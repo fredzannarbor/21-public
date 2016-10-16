@@ -6,8 +6,10 @@ Created on Wed Aug 24 19:41:44 2016
 """
 
 from bs4 import BeautifulSoup
+import sys
+file = sys.argv[1]
 
-soup = BeautifulSoup(open("/home/fred/Dropbox/Downloads/21mktoct.html"))
+soup = BeautifulSoup(open(file))
 
 BeautifulSoup('<span class="price-amount">')
 spans = soup.find_all('span', attrs={'class':'price-amount'})
